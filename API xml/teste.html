@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function myDisplay(data) {
+            console.log(data);
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(data, "text/xml");
+            let tete = (doc.querySelector("avatarfull").textContent);
+            let span = document.createElement("img");
+            span.setAttribute("src", tete)
+            document.getElementsByTagName("body")[0].appendChild(span);
+            span.appendChild(tete)
+
+
+
+        }
+
+        fetch("https://www.decsi.fr/test/api.php?url=http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=786501845D2336A98663DFBF422B3316&steamids=76561198292551912&format=xml")
+            .then(x => x.text())
+            .then(y => myDisplay(y));
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
