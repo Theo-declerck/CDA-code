@@ -7,9 +7,9 @@
 <?import javafx.scene.control.DatePicker?>
 
 
-<AnchorPane id="AnchorPane" fx:id="createPersonAnchor" prefHeight="247.0" prefWidth="285.0"
+<AnchorPane id="AnchorPane" fx:id="modifPersonAnchor" prefHeight="297.0" prefWidth="330.0"
     xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
-    fx:controller="com.example.javafxdemo.AjoutPersonController">
+    fx:controller="com.example.javafxdemo.ModifController">
     <children>
         <TextField id="prenom" fx:id="prenom" layoutX="115.0" layoutY="28.0" />
         <TextField id="nom" fx:id="nom" layoutX="115.0" layoutY="78.0" />
@@ -32,14 +32,11 @@
         <Text layoutX="29.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Service:"
             wrappingWidth="69.677734375" />
 
-        <Text layoutX="29.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date:"
-            wrappingWidth="69.677734375" />
-        <DatePicker fx:id="date" layoutX="115.0" layoutY="278.0" xmlns="http://javafx.com/javafx/8"
-            xmlns:fx="http://javafx.com/fxml/1" />
+        <Button layoutX="29.0" layoutY="275.0" mnemonicParsing="false"
+            onAction="#afficheperso" prefHeight="37.0" prefWidth="150.0" text="Afficher les données" />
+        <Button fx:id="boutontest" layoutX="199.0" layoutY="275.0" mnemonicParsing="false"
+            onAction="#modifperso" prefHeight="37.0" prefWidth="150.0" text="Validerla modif" />
 
-        <Button layoutX="29.0" layoutY="320.0" mnemonicParsing="false"
-            onAction="#createPersonAction" prefHeight="37.0" prefWidth="79.0" text="Créer" />
-            <Button layoutX="29.0" layoutY="365.0" mnemonicParsing="false"
-            onAction="#switchToprimary" prefHeight="37.0" prefWidth="110.0" text="Retour au menu" />
+
     </children>
 </AnchorPane>

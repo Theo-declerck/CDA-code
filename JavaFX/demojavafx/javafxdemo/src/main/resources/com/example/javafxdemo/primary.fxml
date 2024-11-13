@@ -1,19 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Button?>
-<?import javafx.geometry.Insets?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.PrimaryController">
-   <children>
-      <Label text="Primary View" />
+<AnchorPane id="AnchorPane" prefHeight="480.0" prefWidth="1000.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="com.example.javafxdemo.PrimaryController">
+    <children>
+      <TableView fx:id="TVEmployee" layoutX="23.0" layoutY="21.0" prefHeight="334.0" prefWidth="278.0" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="21.0">
+        <columns>
+          <TableColumn prefWidth="135.0" text="Nom">
+                            <cellValueFactory><PropertyValueFactory property="nom"/></cellValueFactory>
+      </TableColumn>
+          <TableColumn minWidth="0.0" prefWidth="142.0" text="Prenom">
+                     <cellValueFactory><PropertyValueFactory property="prenom"/></cellValueFactory>
+          </TableColumn>
+          <TableColumn minWidth="0.0" prefWidth="142.0" text="Années dans l'entreprise">
+                     <cellValueFactory><PropertyValueFactory property="date"/></cellValueFactory>
+          </TableColumn>
+          <TableColumn minWidth="0.0" prefWidth="142.0" text="Poste">
+                     <cellValueFactory><PropertyValueFactory property="poste"/></cellValueFactory>
+          </TableColumn>
+          <TableColumn minWidth="0.0" prefWidth="142.0" text="Salaire annuel brut">
+                     <cellValueFactory><PropertyValueFactory property="salaire"/></cellValueFactory>
+          </TableColumn>
+          <TableColumn minWidth="0.0" prefWidth="142.0" text="Service">
+                     <cellValueFactory><PropertyValueFactory property="service"/></cellValueFactory>
+          </TableColumn>
+        </columns>
+      </TableView>
+      <Button fx:id="button" layoutX="800.0" layoutY="445.0" onAction="#deleteEmployeButtonClicked" prefHeight="25.0" prefWidth="69.0" text="Supprimer" />
+      <Button fx:id="buttonadd" layoutX="700.0" layoutY="445.0" onAction="#switchTosecondary" prefHeight="25.0" prefWidth="69.0" text="Ajouter" />
+      <Button fx:id="buttonmod" layoutX="600.0" layoutY="445.0" onAction="#switchTothird" prefHeight="25.0" prefWidth="69.0" text="Modifier" />
 
-      <Button fx:id="Ajouter" text="Ajouter" onAction="#switchToSecondary" />
-      <!-- <Button fx:id="Modifier" text="Modifier" onAction="#switchToSecondary" />
-      <Button fx:id="Supprimmer" text="Supprimmer" onAction="#switchToSecondary" /> -->
-   </children>
-   <padding>
-      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-   </padding>
-</VBox>
+     </children>
+</AnchorPane>

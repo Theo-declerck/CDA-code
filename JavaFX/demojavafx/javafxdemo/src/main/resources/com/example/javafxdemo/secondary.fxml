@@ -1,16 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Button?>
-<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.DatePicker?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.SecondaryController">
+
+<AnchorPane id="AnchorPane" fx:id="createPersonAnchor" prefHeight="247.0" prefWidth="285.0"
+    xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="com.example.javafxdemo.AjoutPersonController">
     <children>
-        <Label text="Secondary View" />
-        <Button fx:id="secondaryButton" text="Switch to Primary View" onAction="#switchToPrimary" />
+        <TextField id="prenom" fx:id="prenom" layoutX="115.0" layoutY="28.0" />
+        <TextField id="nom" fx:id="nom" layoutX="115.0" layoutY="78.0" />
+        <Text layoutX="29.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prénom:"
+            wrappingWidth="69.677734375" />
+
+        <Text layoutX="29.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom:"
+            wrappingWidth="69.677734375" />
+
+
+        <TextField id="Poste" fx:id="poste" layoutX="115.0" layoutY="128.0" />
+        <Text layoutX="29.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Poste:"
+            wrappingWidth="69.677734375" />
+
+        <TextField id="salaire" fx:id="salaire" layoutX="115.0" layoutY="178.0" />
+        <Text layoutX="29.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Salaire:"
+            wrappingWidth="69.677734375" />
+
+        <TextField id="service" fx:id="service" layoutX="115.0" layoutY="228.0" />
+        <Text layoutX="29.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Service:"
+            wrappingWidth="69.677734375" />
+
+        <Text layoutX="29.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date:"
+            wrappingWidth="69.677734375" />
+        <DatePicker fx:id="date" layoutX="115.0" layoutY="278.0" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1" />
+
+        <Button layoutX="29.0" layoutY="320.0" mnemonicParsing="false"
+            onAction="#createPersonAction" prefHeight="37.0" prefWidth="79.0" text="Créer" />
+            <Button layoutX="29.0" layoutY="365.0" mnemonicParsing="false"
+            onAction="#switchToprimary" prefHeight="37.0" prefWidth="110.0" text="Retour au menu" />
     </children>
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-    </padding>
-</VBox>
+</AnchorPane>
